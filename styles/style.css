@@ -34,25 +34,20 @@ h1{
     letter-spacing: 4px;
 }
 
-.hero{
-    background-color: var(--primary-color);
-    padding: 65px 0 30px;
-}
-
 /* Styles for a container element */
 .container{
-    margin: 20px auto;
+    margin: 120px auto 48px;
     padding: 40px 40px;
     max-width: 500px;
-    background: radial-gradient(circle at 10% 20%, rgb(255, 246, 236) 39.5%, rgba(100, 46, 122, 0.23) 100.2%);
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 10px 10px; 
-    border-radius: 25px;
+    gap: 24px; 
+    border-radius: 24px;
 }
-/* Styles for a display element */
-.display {
+/* Styles for a displayField element */
+.display-field {
     font-size: 24px;
     padding: 5px 5px;
     grid-area: 1 / 1 / 2 / 5;
@@ -103,3 +98,23 @@ button {
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
 }
+footer {
+    text-align: center;
+    margin-top: 50px;
+
+}
+ a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 16px;
+}
+a:hover {
+    color: var(--accent-color);
+}
+.logo {
+    width: 80px;
+    margin-left: 20px;
+    margin-right: 30px;
+    position: relative;
+    top: 10px; 
+  }
