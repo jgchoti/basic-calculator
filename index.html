@@ -8,40 +8,41 @@
     </head>
     <body>
         <div class="container">
+            <!-- Display Field-->
             <input
                 type="text"
                 class="display-field"
                 oninput="filterInput(this)"
             />
-            <!-- Add your classes or ids -->
+            <!-- Buttons -->
             <div class="buttons">
                 <button class="button-ac" onclick="allClear()">AC</button>
-                <button class="button-del" onclick="deletePrev()">DEL</button>
-                <button class="button-percent" onclick="displayValue('%')">
+                <button class="top-buttons" onclick="deletePrev()">DEL</button>
+                <button class="top-buttons" onclick="displayValue('%')">
                     %
                 </button>
-                <button class="button-divide" onclick="displayValue('/')">
+                <button class="right-buttons" onclick="displayValue('/')">
                     /
                 </button>
 
                 <button class="button-7" onclick="displayValue('7')">7</button>
                 <button class="button-8" onclick="displayValue('8')">8</button>
                 <button class="button-9" onclick="displayValue('9')">9</button>
-                <button class="button-multiply" onclick="displayValue('*')">
+                <button class="right-buttons" onclick="displayValue('*')">
                     *
                 </button>
 
                 <button class="button-4" onclick="displayValue('4')">4</button>
                 <button class="button-5" onclick="displayValue('5')">5</button>
                 <button class="button-5" onclick="displayValue('6')">6</button>
-                <button class="button-subtract" onclick="displayValue('-')">
+                <button class="right-buttons" onclick="displayValue('-')">
                     -
                 </button>
 
                 <button class="button-1" onclick="displayValue('1')">1</button>
                 <button class="button-2" onclick="displayValue('2')">2</button>
                 <button class="button-3" onclick="displayValue('3')">3</button>
-                <button class="button-add" onclick="displayValue('+')">
+                <button class="right-buttons" onclick="displayValue('+')">
                     +
                 </button>
 
@@ -57,6 +58,7 @@
                 </button>
             </div>
         </div>
+        <!-- Footer Section -->
         <footer>
             <a
                 href="https://github.com/jgchoti/basic-calculator"
