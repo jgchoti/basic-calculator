@@ -38,7 +38,8 @@ function deletePrev() {
 
 // Display  result when click = button
 function calculateResult() {
-    let inputValue = displayField.value;
+    let inputValue = displayField.value.trim(); // Remove leading/trailing spaces
+
     // Display Error if the input is empty.
     if (inputValue.length === 0) {
         displayField.value = 'Error: Invalid input';
@@ -53,7 +54,7 @@ function calculateResult() {
     try {
         const result = eval(inputValue);
         if (!isNaN(eval(inputValue))) {
-            displayField.value = eval(displayField.value)
+            displayField.value = '=' + eval(displayField.value)
         }
 
         // Display Error if the result is invalid.
