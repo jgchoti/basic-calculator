@@ -4,12 +4,12 @@
 
 /* CSS variable*/
 :root {
-    --font-family: "Roboto Mono", monospace;
+    --font-family: 'Roboto Mono', monospace;
     --main-bg-color: #fff;
-    --primary-color:#DED1E1;
-    --secondary-color: #FEF6EC;
+    --primary-color: #ded1e1;
+    --secondary-color: #fef6ec;
     --accent-color: #fc1883;
-  }
+}
 *,
 *::before,
 *::after {
@@ -26,7 +26,7 @@ body {
 }
 
 /* Styles for the page heading */
-h1{
+h1 {
     font-family: var(--font-family);
     color: var(--secondary-color);
     text-align: center;
@@ -35,7 +35,7 @@ h1{
 }
 
 /* Styles for a container element */
-.container{
+.container {
     margin: 120px auto 48px;
     padding: 40px 40px;
     max-width: 500px;
@@ -43,7 +43,7 @@ h1{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 24px; 
+    gap: 24px;
     border-radius: 24px;
 }
 /* Styles for a displayField element */
@@ -54,8 +54,8 @@ h1{
     max-height: 60px;
     color: var(--accent-color);
     border: 2px solid var(--primary-color);
-  border-radius: 4px;
-  text-shadow: 0 2px var(--primary-color);
+    border-radius: 4px;
+    text-shadow: 0 2px var(--primary-color);
 }
 /* Styles for buttons section */
 .buttons {
@@ -63,47 +63,53 @@ h1{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 20px 20px; 
+    gap: 20px 20px;
 }
 /* Styles for each buttons */
 button {
-  background-color: var(--main-bg-color);
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
-  color: var(--primary-color);
-  cursor: pointer;
-  font-family: var(--font-family);
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  padding-left: 16px;
-  padding-right: 16px;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  font-size: 18px;
+    background-color: var(--main-bg-color);
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-family: var(--font-family);
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
+    font-size: 18px;
 }
 
 .button:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
 }
 
 .button:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  transform: translateY(-2px);
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    transform: translateY(-2px);
 }
 
 .button:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
+    box-shadow: #d6d6e7 0 3px 7px inset;
+    transform: translateY(2px);
 }
+
+/* Styles for footer */
 footer {
     text-align: center;
     margin-top: 50px;
-
 }
- a {
+
+/* Styles for link */
+a {
     text-decoration: none;
     color: var(--primary-color);
     font-size: 16px;
@@ -111,10 +117,12 @@ footer {
 a:hover {
     color: var(--accent-color);
 }
+
+/* Styles for the logo in Footer */
 .logo {
     width: 80px;
     margin-left: 20px;
     margin-right: 30px;
     position: relative;
-    top: 10px; 
-  }
+    top: 10px;
+}
