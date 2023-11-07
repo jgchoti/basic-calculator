@@ -17,6 +17,10 @@ function filterInput(input) {
 // Display value when click buttons
 function displayValue(value) {
     if (value === '%') {
+        // Remove = in front of the input
+        if (displayField.value[0] === '=') {
+            displayField.value = displayField.value.slice(1)
+        }
         displayField.value = (parseFloat(displayField.value)) / 100;
     } else {
         displayField.value += value;
