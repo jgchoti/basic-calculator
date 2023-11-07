@@ -14,6 +14,7 @@
     --right-bg-button-color: #e1d5e9;
     --right-button-color: #4a0078;
     --button-equals-color: #8c27da;
+    --light-mode-button: #f5f5f7;
 }
 *,
 *::before,
@@ -53,11 +54,12 @@ body {
     font-size: 42px;
     font-weight: 700;
     text-align: right;
-    padding: 36px 5px;
+    padding: 60px 5px;
     grid-area: 1 / 1 / 2 / 5;
     max-height: 100px;
     color: var(--accent-color);
     border: none;
+    margin-top: 35px;
 }
 /* Styles for buttons section */
 .buttons-section {
@@ -150,6 +152,7 @@ button:active {
     box-shadow: rgb(227, 214, 231) 0 3px 7px inset;
     transform: translateY(2px);
 }
+
 /* Styles for footer */
 footer {
     text-align: center;
