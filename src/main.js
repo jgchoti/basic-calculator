@@ -30,7 +30,7 @@ function allClear() {
 
 // Delete the previous characters when click DEL button 
 function deletePrev() {
-    if (inputValue.length > 0) {
+    if (displayField.value.length > 0) {
         displayField.value = displayField.value.slice(0, -1)
     }
 }
@@ -38,8 +38,12 @@ function deletePrev() {
 
 // Display  result when click = button
 function calculateResult() {
-    let inputValue = displayField.value.trim(); // Remove leading/trailing spaces
-
+    let inputValue = displayField.value.trim();
+    // Remove = in front of the result
+    if (inputValue[0] === '=') {
+        inputValue = inputValue.slice(0, 1)
+        console.log(inputValue)
+    }
     // Display Error if the input is empty.
     if (inputValue.length === 0) {
         displayField.value = 'Error: Invalid input';
@@ -52,9 +56,8 @@ function calculateResult() {
     }
     // Display result if the result is numbers.
     try {
-        const result = eval(inputValue);
         if (!isNaN(eval(inputValue))) {
-            displayField.value = '=' + eval(displayField.value)
+            displayField.value = '=' + eval(inputValue)
         }
 
         // Display Error if the result is invalid.
