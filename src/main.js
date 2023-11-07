@@ -35,13 +35,12 @@ function deletePrev() {
     }
 }
 
-
 // Display  result when click = button
 function calculateResult() {
     let inputValue = displayField.value.trim();
     // Remove = in front of the result
     if (inputValue[0] === '=') {
-        inputValue = inputValue.slice(0, 1)
+        inputValue = inputValue.slice(1)
         console.log(inputValue)
     }
     // Display Error if the input is empty.
@@ -57,9 +56,8 @@ function calculateResult() {
     // Display result if the result is numbers.
     try {
         if (!isNaN(eval(inputValue))) {
-            displayField.value = '=' + eval(inputValue)
+            displayField.value = '=' + eval(inputValue).toFixed(2)
         }
-
         // Display Error if the result is invalid.
         else {
             displayField.value = 'Error: Invalid result'
