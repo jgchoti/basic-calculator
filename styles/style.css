@@ -31,9 +31,9 @@ body {
 
 /* Styles for a container element */
 .container {
-    margin: 76px auto 24px;
+    margin: 48px auto 24px;
     padding: 48px 24px;
-    max-width: 360px;
+    max-width: 500px;
     background-color: var(--main-bg-color);
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -43,22 +43,19 @@ body {
     box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
         rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
 }
-/* Styles for a displayField element */
+/* Styles for a display field element */
 .display-field {
-    font-size: 30px;
+    font-size: 42px;
     font-weight: 700;
     text-align: right;
-    padding: 24px 5px;
+    padding: 36px 5px;
     grid-area: 1 / 1 / 2 / 5;
     max-height: 72px;
     color: var(--accent-color);
-    /* border: 2px solid var(--primary-color);
-    border-radius: 4px; */
     border: none;
-    text-shadow: 0 2px var(--primary-color);
 }
 /* Styles for buttons section */
-.buttons {
+.buttons-section {
     grid-area: 2 / 1 / 2 / 5;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -75,15 +72,15 @@ button {
     color: var(--accent-color);
     cursor: pointer;
     font-family: var(--font-family);
-    height: 68px;
-    width: 70px;
+    height: 89px;
+    width: 98px;
     justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
     text-decoration: none;
     transition: box-shadow 0.15s, transform 0.15s;
-    font-size: 18px;
+    font-size: 24px;
     margin: 0px auto;
 }
 
@@ -96,7 +93,7 @@ button:active {
     box-shadow: #d6d6e7 0 3px 7px inset;
     transform: translateY(2px);
 }
-
+/* Styles for top buttons */
 .button-ac {
     background-color: var(--ac-button-color);
     color: var(--main-bg-color);
@@ -123,6 +120,7 @@ button:active {
     transform: translateY(2px);
 }
 
+/* Styles for right buttons */
 .right-buttons {
     background-color: var(--right-bg-button-color);
     color: var(--right-button-color);
@@ -172,4 +170,13 @@ a:hover {
     margin-right: 30px;
     position: relative;
     top: 10px;
+}
+/* Medium devices */
+@media only screen and (min-width: 768px) {
+}
+/* browser window is 600px or smaller */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
 }
