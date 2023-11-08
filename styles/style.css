@@ -159,7 +159,7 @@ a:hover {
 /* browser window is 600px or smaller */
 @media only screen and (max-width: 600px) {
     .container {
-        margin: 110px auto 32px;
+        margin: 90px auto 32px;
         max-width: 350px;
     }
     .display-field {
