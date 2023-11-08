@@ -36,8 +36,8 @@ body {
 
 /* Styles for a container element */
 .container {
-    margin: 48px auto 24px;
-    padding: 48px 24px;
+    margin: 24px auto 24px;
+    padding: 32px 24px;
     max-width: 500px;
     background-color: var(--main-bg-color);
     display: grid;
@@ -56,10 +56,12 @@ body {
     text-align: right;
     padding: 60px 5px;
     grid-area: 1 / 1 / 2 / 5;
-    max-height: 100px;
+    max-height: 90px;
     color: var(--accent-color);
     border: none;
-    margin-top: 35px;
+    white-space: nowrap;
+    display: flex;
+    overflow: auto;
 }
 /* Styles for buttons section */
 .buttons-section {
@@ -114,18 +116,6 @@ button:active {
     box-shadow: rgba(243, 176, 51, 0.4) 0 2px 4px,
         rgba(110, 88, 48, 0.3) 0 7px 13px -3px, #e7e1d6 0 -3px 0 inset;
 }
-.button-ac:hover,
-.top-buttons:hover {
-    box-shadow: rgba(66, 48, 35, 0.4) 0 4px 8px,
-        rgba(66, 54, 35, 0.3) 0 7px 13px -3px, #e7ddd6 0 -3px 0 inset;
-    transform: translateY(-2px);
-}
-
-.button-ac:active,
-.top-buttons:active {
-    box-shadow: #e7ded6 0 3px 7px inset;
-    transform: translateY(2px);
-}
 
 /* Styles for right buttons */
 .right-buttons {
@@ -139,18 +129,6 @@ button:active {
     color: var(--main-bg-color);
     box-shadow: rgba(166, 51, 243, 0.4) 0 2px 4px,
         rgba(95, 48, 110, 0.3) 0 7px 13px -3px, #e3d6e7 0 -3px 0 inset;
-}
-.right-buttons:hover,
-.button-equals:hover {
-    box-shadow: rgba(58, 35, 66, 0.4) 0 4px 8px,
-        rgba(58, 35, 66, 0.3) 0 7px 13px -3px, rgb(226, 214, 231) 0 -3px 0 inset;
-    transform: translateY(-2px);
-}
-
-.right-buttons:active,
-.button-equals:active {
-    box-shadow: rgb(227, 214, 231) 0 3px 7px inset;
-    transform: translateY(2px);
 }
 
 /* Styles for footer */
