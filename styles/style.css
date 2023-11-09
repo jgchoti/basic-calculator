@@ -54,7 +54,7 @@ body {
     font-size: 42px;
     font-weight: 700;
     text-align: right;
-    padding: 60px 5px;
+    padding: 70px 5px 35px 5px;
     grid-area: 1 / 1 / 2 / 5;
     max-height: 90px;
     color: var(--accent-color);
