@@ -21,9 +21,9 @@ function filterInput(input) {
     ];
     const inputValue = displayField.value;
     let filteredValue = '';
-    for (const userType of inputValue) {
-        if (validInput.includes(userType)) {
-            filteredValue += userType;
+    for (const userInput of inputValue) {
+        if (validInput.includes(userInput)) {
+            filteredValue += userInput;
         }
     }
     displayField.value = filteredValue;
