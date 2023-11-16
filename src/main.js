@@ -33,7 +33,7 @@ function filterInput(input) {
 function displayValue(value) {
     // Check if the button click is the '%' button
     if (value === '%' && displayField.value.length > 0) {
-        // Remove = in front of the input
+        // Remove =, *, / in front of the input
         if (
             displayField.value[0] === '=' ||
             displayField.value[0] === '*' ||
