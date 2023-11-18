@@ -4,6 +4,7 @@ let displayField = document.querySelector('.display-field');
 //Event listener for press "Enter" to calculate
 displayField.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
+        console.log(displayField.value)
         calculateResult();
     }
 });
@@ -46,9 +47,7 @@ function displayValue(value) {
     if (value === '%' && displayField.value.length > 0) {
         // Remove =, *, / in front of the input
         if (
-            displayField.value[0] === '=' ||
-            displayField.value[0] === '*' ||
-            displayField.value[0] === '/'
+            ['/', '*', '='].includes(displayField.value[0])
         ) {
             displayField.value = displayField.value.slice(1);
         }
