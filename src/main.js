@@ -113,7 +113,7 @@ function checkForErrors(inputValue) {
         inputValue[inputValue.length - 1] == '*' ||
         inputValue[inputValue.length - 1] === '%'
     ) {
-        displayField.value = 'Error: Can not start or end with operators';
+        displayField.value = 'Error: No start or end with operators';
         return;
     } else {
         displayField.value = 'Error: Invalid input';
