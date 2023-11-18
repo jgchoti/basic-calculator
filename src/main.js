@@ -106,12 +106,8 @@ function checkForErrors(inputValue) {
     }
     //  Display Error if the input is start or end with operators.
     else if (
-        inputValue[0] === '/' ||
-        inputValue[0] === '*' ||
-        inputValue[0] === '%' ||
-        inputValue[inputValue.length - 1] == '/' ||
-        inputValue[inputValue.length - 1] == '*' ||
-        inputValue[inputValue.length - 1] === '%'
+        ['/', '*', '%'].includes(inputValue[0]) ||
+        ['/', '*', '%', '+', '-'].includes(inputValue[inputValue.length - 1])
     ) {
         displayField.value = 'Error: No start or end with operators';
         return;
