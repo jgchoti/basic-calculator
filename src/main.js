@@ -2,8 +2,8 @@
 let displayField = document.querySelector('.display-field');
 
 // Display only valid input characters
-function filterInput(input) {
-    const validInput = [
+function filterInput() {
+    let validDigits = [
         '0',
         '1',
         '2',
@@ -14,15 +14,19 @@ function filterInput(input) {
         '7',
         '8',
         '9',
-        '/',
-        '*',
-        '+',
-        '-'
     ];
+    let validOperators = ['/', '*', '+', '-'];
     const inputValue = displayField.value;
     let filteredValue = '';
+
     for (const userInput of inputValue) {
-        if (validInput.includes(userInput)) {
+        if (validDigits.includes(userInput)) {
+            filteredValue += userInput;
+        }
+        else if (
+            (!validOperators.includes(filteredValue[filteredValue.length - 1]) &&
+                validOperators.includes(userInput))
+        ) {
             filteredValue += userInput;
         }
     }
