@@ -31,11 +31,10 @@ function filterInput() {
         if (validDigits.includes(userInput)) {
             filteredValue += userInput;
         }
-        else if (
-            (!validOperators.includes(filteredValue[filteredValue.length - 1]) &&
-                validOperators.includes(userInput))
-        ) {
-            filteredValue += userInput;
+        else if (validOperators.includes(userInput)) {
+            if (!validOperators.includes(filteredValue[filteredValue.length - 1])) {
+                filteredValue += userInput;
+            }
         }
     }
     displayField.value = filteredValue;
@@ -59,7 +58,12 @@ function displayValue(value) {
         } catch (error) {
             checkForErrors(inputValue);
         }
-    } else {
+    } else if (['/', '*', '+', '-'].includes(value)) {
+        if (!['/', '*', '+', '-'].includes(displayField.value[displayField.value.length - 1])) {
+            displayField.value += value;
+        }
+    }
+    else {
         // If the button click is not '%', display the value to the displayField
         displayField.value += value;
     }
