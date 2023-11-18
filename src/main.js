@@ -1,6 +1,13 @@
 // Get the display field element
 let displayField = document.querySelector('.display-field');
 
+//Event listener for press "Enter" to calculate
+displayField.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        calculateResult();
+    }
+});
+
 // Display only valid input characters
 function filterInput() {
     let validDigits = [
