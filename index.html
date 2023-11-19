@@ -9,6 +9,7 @@
     <body>
         <div class="container">
             <!-- Display Field-->
+
             <input type="text" class="display-field" oninput="filterInput()" />
 
             <!-- Buttons -->
@@ -22,38 +23,66 @@
                     /
                 </button>
 
-                <button class="button-7" onclick="displayValue('7')">7</button>
-                <button class="button-8" onclick="displayValue('8')">8</button>
-                <button class="button-9" onclick="displayValue('9')">9</button>
+                <button class="digits-buttons" onclick="displayValue('7')">
+                    7
+                </button>
+                <button class="digits-buttons" onclick="displayValue('8')">
+                    8
+                </button>
+                <button class="digits-buttons" onclick="displayValue('9')">
+                    9
+                </button>
                 <button class="right-buttons" onclick="displayValue('*')">
-                    *
+                    x
                 </button>
 
-                <button class="button-4" onclick="displayValue('4')">4</button>
-                <button class="button-5" onclick="displayValue('5')">5</button>
-                <button class="button-5" onclick="displayValue('6')">6</button>
+                <button class="digits-buttons" onclick="displayValue('4')">
+                    4
+                </button>
+                <button class="digits-buttons" onclick="displayValue('5')">
+                    5
+                </button>
+                <button class="digits-buttons" onclick="displayValue('6')">
+                    6
+                </button>
                 <button class="right-buttons" onclick="displayValue('-')">
                     -
                 </button>
 
-                <button class="button-1" onclick="displayValue('1')">1</button>
-                <button class="button-2" onclick="displayValue('2')">2</button>
-                <button class="button-3" onclick="displayValue('3')">3</button>
+                <button class="digits-buttons" onclick="displayValue('1')">
+                    1
+                </button>
+                <button class="digits-buttons" onclick="displayValue('2')">
+                    2
+                </button>
+                <button class="digits-buttons" onclick="displayValue('3')">
+                    3
+                </button>
                 <button class="right-buttons" onclick="displayValue('+')">
                     +
                 </button>
 
-                <button class="button-0" onclick="displayValue('0')">0</button>
-                <button class="button-double-zero" onclick="displayValue('00')">
+                <button class="digits-buttons" onclick="displayValue('0')">
+                    0
+                </button>
+                <button class="digits-buttons" onclick="displayValue('00')">
                     00
                 </button>
-                <button class="button-decimal" onclick="displayValue('.')">
+                <button class="digits-buttons" onclick="displayValue('.')">
                     .
                 </button>
                 <button class="button-equals" onclick="calculateResult()">
                     =
                 </button>
             </div>
+            <a
+                href="/"
+                rel="noopener noreferrer"
+                class="theme-switch"
+                onclick="themeSwitch(); return false;"
+            >
+                DARK THEME
+            </a>
         </div>
         <!-- Footer Section -->
         <footer>
