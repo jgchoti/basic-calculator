@@ -53,8 +53,9 @@ body {
 
 /* Styles for a container element */
 .container {
+    position: relative;
     margin: 24px auto 24px;
-    padding: 32px 24px;
+    padding: 32px 24px 60px 24px;
     max-width: 500px;
     background-color: var(--main-bg-color);
     display: grid;
@@ -140,6 +141,19 @@ button:active {
     color: var(--main-bg-color);
     box-shadow: var(--right-box-shadow);
 }
+/*  Styles for theme switch button*/
+
+.theme-switch {
+    background-color: var(--main-bg-color);
+    border-radius: 8px;
+    height: 36px;
+    width: 120px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 15px;
+    right: 24px;
+    padding: 8px;
+}
 
 /* Styles for footer */
 footer {
@@ -202,7 +216,7 @@ a:hover {
 /* browser window is 600px or smaller */
 @media only screen and (max-width: 600px) {
     .container {
-        margin: 90px auto 32px;
+        margin: 80px auto 24px;
         max-width: 350px;
     }
     .display-field {
