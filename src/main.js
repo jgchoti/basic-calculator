@@ -118,3 +118,46 @@ function checkForErrors(inputValue) {
         displayField.value = 'Error: Invalid input';
     }
 }
+
+// Dark theme once click
+let darkTheme = false;
+function themeSwitch() {
+    darkTheme = !darkTheme;
+    if (darkTheme) {
+        document.querySelector('.theme-switch').innerHTML = "LIGHT THEME";
+        document.body.classList.add("dark-bg");
+        document.querySelector('.container').classList.add("dark-container-bg");
+        document.querySelector('.display-field').classList.add("dark-display-field");
+        // select multiple elements
+        let digitsButtons = document.querySelectorAll('.digits-buttons');
+        let rightButtons = document.querySelectorAll('.right-buttons');
+        let topButtons = document.querySelectorAll('.top-buttons');
+        for (const button of digitsButtons) {
+            button.classList.add('dark-digits-buttons');
+        }
+        for (const button of rightButtons) {
+            button.classList.add('dark-right-buttons');
+        }
+        for (const button of topButtons) {
+            button.classList.add('dark-top-buttons');
+        }
+    } else {
+        document.querySelector('.theme-switch').innerHTML = "DARK THEME";
+        document.body.classList.remove("dark-bg");
+        document.querySelector('.container').classList.remove("dark-container-bg");
+        document.querySelector('.display-field').classList.remove("dark-display-field");
+        // select multiple elements
+        let digitsButtons = document.querySelectorAll('.digits-buttons');
+        let rightButtons = document.querySelectorAll('.right-buttons');
+        let topButtons = document.querySelectorAll('.top-buttons');
+        for (const button of digitsButtons) {
+            button.classList.remove('dark-digits-buttons');
+        }
+        for (const button of rightButtons) {
+            button.classList.remove('dark-right-buttons');
+        }
+        for (const button of topButtons) {
+            button.classList.remove('dark-top-buttons');
+        }
+    }
+}
