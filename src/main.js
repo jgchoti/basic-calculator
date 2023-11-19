@@ -43,10 +43,12 @@ function displayValue(value) {
         try {
             // Check if the value is a number and calculate its percentage
             if (!isNaN(parseFloat(displayField.value) / 100)) {
+                console.log(displayField.value);
                 displayField.value = '=' + parseFloat(displayField.value) / 100;
             }
         } catch (error) {
-            checkForErrors(inputValue);
+            console.log(displayField.value);
+            checkForErrors(displayField.value);
         }
     } else if (['/', '*', '+', '-'].includes(value)) {
         if (
