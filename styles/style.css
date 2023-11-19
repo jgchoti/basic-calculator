@@ -55,7 +55,7 @@ body {
 .container {
     position: relative;
     margin: 24px auto 24px;
-    padding: 32px 24px 60px 24px;
+    padding: 36px 24px 72px 24px;
     max-width: 500px;
     background-color: var(--main-bg-color);
     display: grid;
@@ -150,7 +150,7 @@ button:active {
     width: 120px;
     font-size: 14px;
     position: absolute;
-    bottom: 10px;
+    bottom: 18px;
     right: 32px;
     padding: 8px;
 }
