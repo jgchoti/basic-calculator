@@ -2,27 +2,16 @@
 let displayField = document.querySelector('.display-field');
 
 //Event listener for press "Enter" to calculate
-displayField.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        console.log(displayField.value)
+displayField.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        console.log(displayField.value);
         calculateResult();
     }
 });
 
 // Display only valid input characters
 function filterInput() {
-    let validDigits = [
-        '0',
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-    ];
+    let validDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     let validOperators = ['/', '*', '+', '-'];
     const inputValue = displayField.value;
     let filteredValue = '';
@@ -30,9 +19,12 @@ function filterInput() {
     for (const userInput of inputValue) {
         if (validDigits.includes(userInput)) {
             filteredValue += userInput;
-        }
-        else if (validOperators.includes(userInput)) {
-            if (!validOperators.includes(filteredValue[filteredValue.length - 1])) {
+        } else if (validOperators.includes(userInput)) {
+            if (
+                !validOperators.includes(
+                    filteredValue[filteredValue.length - 1]
+                )
+            ) {
                 filteredValue += userInput;
             }
         }
@@ -45,9 +37,7 @@ function displayValue(value) {
     // Check if the button click is the '%' button
     if (value === '%' && displayField.value.length > 0) {
         // Remove =, *, / in front of the input
-        if (
-            ['/', '*', '='].includes(displayField.value[0])
-        ) {
+        if (['/', '*', '='].includes(displayField.value[0])) {
             displayField.value = displayField.value.slice(1);
         }
         try {
@@ -59,11 +49,14 @@ function displayValue(value) {
             checkForErrors(inputValue);
         }
     } else if (['/', '*', '+', '-'].includes(value)) {
-        if (!['/', '*', '+', '-'].includes(displayField.value[displayField.value.length - 1])) {
+        if (
+            !['/', '*', '+', '-'].includes(
+                displayField.value[displayField.value.length - 1]
+            )
+        ) {
             displayField.value += value;
         }
-    }
-    else {
+    } else {
         // If the button click is not '%', display the value to the displayField
         displayField.value += value;
     }
@@ -124,10 +117,12 @@ let darkTheme = false;
 function themeSwitch() {
     darkTheme = !darkTheme;
     if (darkTheme) {
-        document.querySelector('.theme-switch').innerHTML = "LIGHT THEME";
-        document.body.classList.add("dark-bg");
-        document.querySelector('.container').classList.add("dark-container-bg");
-        document.querySelector('.display-field').classList.add("dark-display-field");
+        document.querySelector('.theme-switch').innerHTML = 'LIGHT THEME';
+        document.body.classList.add('dark-bg');
+        document.querySelector('.container').classList.add('dark-container-bg');
+        document
+            .querySelector('.display-field')
+            .classList.add('dark-display-field');
         // select multiple elements
         let digitsButtons = document.querySelectorAll('.digits-buttons');
         let rightButtons = document.querySelectorAll('.right-buttons');
@@ -142,10 +137,14 @@ function themeSwitch() {
             button.classList.add('dark-top-buttons');
         }
     } else {
-        document.querySelector('.theme-switch').innerHTML = "DARK THEME";
-        document.body.classList.remove("dark-bg");
-        document.querySelector('.container').classList.remove("dark-container-bg");
-        document.querySelector('.display-field').classList.remove("dark-display-field");
+        document.querySelector('.theme-switch').innerHTML = 'DARK THEME';
+        document.body.classList.remove('dark-bg');
+        document
+            .querySelector('.container')
+            .classList.remove('dark-container-bg');
+        document
+            .querySelector('.display-field')
+            .classList.remove('dark-display-field');
         // select multiple elements
         let digitsButtons = document.querySelectorAll('.digits-buttons');
         let rightButtons = document.querySelectorAll('.right-buttons');
