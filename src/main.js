@@ -12,7 +12,7 @@ displayField.addEventListener('keydown', function (event) {
 // Display only valid input characters
 function filterInput() {
     let validDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    let validOperators = ['/', '*', '+', '-'];
+    let validOperators = ['/', '*', '+', '-', '.'];
     const inputValue = displayField.value;
     let filteredValue = '';
 
