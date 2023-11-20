@@ -216,7 +216,7 @@ a:hover {
 /* browser window is 600px or smaller */
 @media only screen and (max-width: 600px) {
     .container {
-        margin: 80px auto 24px;
+        margin: 60px auto 24px;
         max-width: 350px;
     }
     .display-field {
