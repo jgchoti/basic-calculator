@@ -61,6 +61,7 @@ function displayValue(value) {
     } else {
         // If the button click is not '%', display the value to the displayField
         displayField.value += value;
+
     }
 }
 
